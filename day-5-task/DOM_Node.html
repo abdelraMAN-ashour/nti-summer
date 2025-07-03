@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <style>
+      .center {
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="center">
+      <div id="header">
+        <img src="dom.jpg" alt="hello..it rains over here:)" />
+      </div>
+      <div id="navigation">
+        <ul id="nav">
+          <li><strong>Memo</strong></li>
+          <li><a href="#">Articles</a></li>
+          <li><a href="#">Photos</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Clients</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <script>
+        const header=document.querySelector("#header");
+        const img1=document.querySelector("#header img");
+        header.style.textAlign="end";
+        const img=document.createElement("img");
+        img.src=img1.src;
+        document.body.append(img);
+        const nav = document.querySelector("#nav");
+        const li = document.querySelectorAll("#nav li");
+        li.forEach((e) => {
+        e.style.listStylePosition = "inside";
+        });
+      nav.style.margin = "0";
+      nav.style.padding = "0";
+    </script>
+  </body>
+</html>
